@@ -187,10 +187,12 @@ configure_file (cmake/config.cmake.in "${PROJECT_BINARY_DIR}/${PACKAGE_NAME}-con
 # TODO(andreas) Replace Bash scripts such that tests can be run on Windows (e.g., Python).
 #               The gflags_unittest.sh script should best be replaced by multiple
 #               add_test commands in the test/CMakeLists.txt file.
-if (UNIX)
-  include (CTest)
-  if (BUILD_TESTING)
-    enable_testing ()
-    add_subdirectory (test)
-  endif ()
-endif ()
+
+# ccboost: disable gflag tests
+#if (UNIX)
+  #include (CTest)
+  #if (BUILD_TESTING)
+    #enable_testing ()
+    #add_subdirectory (test)
+  #endif ()
+#endif ()
