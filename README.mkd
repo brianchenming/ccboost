@@ -1,0 +1,13 @@
+# About
+Code base of C++ projects.
+
+# Install
+Cmake and Googletest are necessary to build and run it. Define an environment
+variable GOOGLE_TEST to the directory of the Googletest. 
+
+    $ export GOOGLE_TEST=/path/to/googletest
+    $ cmake .
+    $ make
+    $ make test
+
+Make sure it passes all test cases before you proceed.
